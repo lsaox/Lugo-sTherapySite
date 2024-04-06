@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnchorOfHope.com</title>
-    
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS link -->
     <style>
         /* Basic CSS for styling */
@@ -12,83 +11,94 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #0a072c;
-        }
-        header {
-            background-color: #ffffff;
-            color: #fff;
-            padding: 13px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: #171347;
         }
         .logo {
             font-size: 24px;
         }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
+        .navbar-brand img {
+            max-height: 10000px; /* Adjust logo size as needed */
         }
-        nav ul li {
-            margin-right: 20px;
+        .navbar {
+            background-color: #ffffff;
         }
-        nav ul li a {
-            text-decoration: none;
+        .navbar-nav .nav-link {
             color: #0a0000;
         }
-        nav ul li a:hover {
-            text-decoration: underline;
+        .navbar-nav .nav-link:hover {
+            color: #000000;
         }
         /* Style for phone number and appointment section */
         .contact-section {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #131124;
+            position: absolute; /* Position absolute for custom positioning */
+            bottom: 10px;
+            left: 10px;
+            background-color: #070424a9;
             color: #fff;
             padding: 10px;
             border-radius: 10px;
         }
+        .contact-section .btn {
+        background-color: #635e5eda; /* Red background color */
+        color: #ffffff; /* White text color */
+        border: none; /* Remove button border */
+    }
 
+    /* Optional: Hover effect */
+    .contact-section .btn:hover {
+        background-color: #00cc11; /* Darker red on hover */
+    }
         /* Style for the carousel */
         #carouselExampleSlidesOnly {
             width: 65%; /* Adjust the width as needed */
             margin: 0 auto; /* Center the carousel */
-        }
-
-        .carousel-item {
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.5s ease-in-out; /* Fade effect */
-        }
-
-        .carousel-item.active {
-            opacity: 1; /* Active item fully visible */
-            transition: opacity 1s ease-in-out; /* Smooth transition for active item */
+            position: relative; /* Added for positioning */
         }
 
         .carousel-inner {
             overflow: hidden; /* Prevent images from overflowing */
-            border-radius: 10px; /* Add some border-radius to the carousel */
+            border-radius: 0px; /* Add some border-radius to the carousel */
+            position: relative; /* Added for positioning */
+            margin-top: 35px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/logo.png" alt="Your Logo" width="150" height="auto">
+    <nav class="navbar navbar-expand-lg navbar-light  py-1" >
+        <div class="container px-17">
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.png" alt="Your Logo" width="350" height="auto" >
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">What We Offer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">What We Treat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Modalities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Info</a>
+                    </li>
+                
+                  
+                    <!-- Add more menu items as needed -->
+                </ul>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-                <!-- Add more menu items as needed -->
-            </ul>
-        </nav>
-    </header>
+    </nav>
 
     <!-- Carousel Section -->
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -109,12 +119,11 @@
                 <img src="assets/image5.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="contact-section">
-        <div>Phone: 123-456-7890</div>
-        <button class="btn btn-primary mt-2">Schedule an Appointment</button>
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <div>Phone: 123-456-7890</div>
+            <button class="btn btn-primary mt-2">Schedule an Appointment</button>
+        </div>
     </div>
 
     <!-- Bootstrap JS links (jQuery and Bootstrap JS) -->
