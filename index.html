@@ -1,134 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnchorOfHope.com</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> <!-- Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS link -->
+    <link href="style.css" rel="stylesheet"> <!-- Link to your CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Playball&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="script.js"></script>
     <style>
-        /* Basic CSS for styling */
         body {
-            font-family: Arial, sans-serif;
+            overflow-x:hidden;
             margin: 0;
-            padding: 0;
-            background: #171347;
-        }
-        .logo {
-            font-size: 24px;
-        }
-        .navbar-brand img {
-            max-height: 10000px; /* Adjust logo size as needed */
-        }
-        .navbar {
-            background-color: #ffffff;
-        }
-        .navbar-nav .nav-link {
-            color: #0a0000;
-        }
-        .navbar-nav .nav-link:hover {
-            color: #000000;
-        }
-        /* Style for phone number and appointment section */
-        .contact-section {
-            position: absolute; /* Position absolute for custom positioning */
-            bottom: 10px;
-            left: 10px;
-            background-color: #070424a9;
-            color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .contact-section .btn {
-        background-color: #635e5eda; /* Red background color */
-        color: #ffffff; /* White text color */
-        border: none; /* Remove button border */
-    }
-
-    /* Optional: Hover effect */
-    .contact-section .btn:hover {
-        background-color: #00cc11; /* Darker red on hover */
-    }
-        /* Style for the carousel */
-        #carouselExampleSlidesOnly {
-            width: 65%; /* Adjust the width as needed */
-            margin: 0 auto; /* Center the carousel */
-            position: relative; /* Added for positioning */
-        }
-
-        .carousel-inner {
-            overflow: hidden; /* Prevent images from overflowing */
-            border-radius: 0px; /* Add some border-radius to the carousel */
-            position: relative; /* Added for positioning */
-            margin-top: 35px;
+ 
         }
     </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light  py-1" >
-        <div class="container px-17">
-            <a class="navbar-brand" href="#">
-                <img src="assets/logo.png" alt="Your Logo" width="350" height="auto" >
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">What We Offer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">What We Treat</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Modalities</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Info</a>
-                    </li>
-                
-                  
-                    <!-- Add more menu items as needed -->
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Carousel Section -->
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="assets/image1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/image2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/image3.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/image4.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/image5.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <div>Phone: 123-456-7890</div>
-            <button class="btn btn-primary mt-2">Schedule an Appointment</button>
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light py-1 fixed-top">
+    <div class="container px-17">
+        <a class="navbar-brand" href="#">
+            <img src="assets/logo.png" style="max-height: 130px;" alt="Logo">
+            <span style="font-family: sans-serif; font-size: 30px; padding-right:-100px;"></span> <!-- Apply Playball font style here -->
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        What We Offer
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" href="#">Child Counseling</a>
+                        <a class="dropdown-item" href="#">Adolescent Counseling</a>
+                        <a class="dropdown-item" href="#">Young Adult Counseling</a>
+                        <a class="dropdown-item" href="#">Adult Counseling</a>
+                        <a class="dropdown-item" href="#">Couples Counseling</a>
+                        <a class="dropdown-item" href="#">Family Counseling</a>
+                        <a class="dropdown-item" href="#">Online Counseling</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        What We Treat
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                        <a class="dropdown-item" href="#">Adjustment Disorder</a>
+                        <a class="dropdown-item" href="#">ADHD</a>
+                        <a class="dropdown-item" href="#">Anxiety</a>
+                        <a class="dropdown-item" href="#">Bipolar Disorder</a>
+                        <a class="dropdown-item" href="#">Depression</a>
+                        <a class="dropdown-item" href="#">DMDD</a>
+                        <a class="dropdown-item" href="#">Emotional Regulation</a>
+                        <a class="dropdown-item" href="#">Grief</a>
+                        <a class="dropdown-item" href="#">Insomnia</a>
+                        <a class="dropdown-item" href="#">Life Transition</a>
+                        <a class="dropdown-item" href="#">Mental Health</a>
+                        <a class="dropdown-item" href="#">OCD</a>
+                        <a class="dropdown-item" href="#">ODD</a>
+                        <a class="dropdown-item" href="#">Panic Disorder</a>
+                        <a class="dropdown-item" href="#">Parent/Child Relationship Problems</a>
+                        <a class="dropdown-item" href="#">PTSD</a>
+                        <a class="dropdown-item" href="#">Separation Anxiety Disorder</a>
+                        <a class="dropdown-item" href="#">Sports Performance Therapy</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Modalities
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                        <a class="dropdown-item" href="#">CBT</a>
+                        <a class="dropdown-item" href="#">Solution-Focused Therapy</a>
+                        <a class="dropdown-item" href="#">Narrative Therapy</a>
+                        <a class="dropdown-item" href="#">Gottman Therapy Trained</a>
+                        <a class="dropdown-item" href="#">Separation Anxiety Disorder</a>
+                        <a class="dropdown-item" href="#">Sports Performance Therapy</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                        <a class="dropdown-item" href="#">Jason Lugo</a>
+                        <a class="dropdown-item" href="#">Provider 2</a>
+                        <a class="dropdown-item" href="#">Provider 3</a>
+                        <a class="dropdown-item" href="#">Teddy</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Info</a>
+                </li>
+            </ul>
         </div>
     </div>
+</nav>
+    <section class="new-section" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Long horizontal picture with centered text -->
+        <div class="image-container">
+            <img src="assets/scenic.jpg" class="long-picture full-width" alt="Long Picture">
+            <div class="centered-text">
+                <h2 class="btn-shine" style="font-size: 58px;">Anchor Of Hope Counseling</h2>
+                <p class="btn-shine" style="font-size: 34px;">Empowering hope, transforming lives.</p>
+                <a href="#counseling-sectionh" class="btn btn-primary btn-lg smooth-scroll custom-grey-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
 
+  
+  
+
+    <section id="AboutService" class="AboutService" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h6  id="AboutServiceh" class="aboutheader">Dedicated Counseling</h6>
+                    <p>
+                        Dedicated to providing effective, evidence-based counseling and psychiatric services, Anchor of
+                        Hope Counseling stand as beacons in mental health care, offering expert, compassionate
+                        assistance to individuals navigating life’s complex terrain. With a foundation rooted in
+                        cognitive behavioral therapy (CBT) and comprehensive medication management, our team addresses a
+                        spectrum of challenges including anxiety, depression, phobias, insomnia, and more specialized
+                        conditions such as ADHD and oppositional defiant disorder. </p>
+                    <p>
+                        Whether through individual or group therapy, psychological evaluations, or our online and
+                        in-person service options, Anchor of Hope Counseling is committed to guiding individuals
+                        towards healing and Growth. Our approach is grounded in the latest evidence-based practices and
+                        a profound understanding of the challenges faced in the 21st century. </p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="Assets/aboutservice.jpg" class="img-fluid about-image" alt="Placeholder Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counseling Section -->
+    <section class="Explore" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="counseling-header">Explore Our Range of Counseling & Specialties</h2>
+
+                    <p class="counseling-description">Anchor Of Hope provides a comprehensive range of mental
+                        health services tailored to meet the distinct requirements of every individual. With a focus on
+                        advanced therapeutic methods and contemporary psychiatric support, our compassionate team is
+                        devoted to assisting you on your journey towards healing and strength.
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counseling Section -->
+    <section class="counseling-section mt-5 mb-5" id=counseling-sectionh da data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-3 position-relative">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Child and Parenting Counseling</h5>
+                        </div>
+                        <img src="assets/Child.png" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <!-- Card body content -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3 position-relative">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Couples and Marriage Therapy</h5>
+                        </div>
+                        <img src="Assets/Couple.png" class="card-img-top" alt="Image 2">
+                        <div class="card-body">
+                            <!-- Card body content -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3 position-relative">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Individual Therapy</h5>
+                        </div>
+                        <img src="Assets/1on1.jpg" class="card-img-top" alt="Image 3">
+                        <div class="card-body">
+                            <!-- Card body content -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat the above structure for the remaining cards -->
+                <div class="col-md-4">
+                    <div class="card mb-3 position-relative">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Adolescent and Teen Counseling</h5>
+                        </div>
+                        <img src="Assets/Teen.png" class="card-img-top" alt="Image 4">
+                        <div class="card-body">
+                            <!-- Card body content -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3 position-relative">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Family Counseling</h5>
+                        </div>
+                        <img src="Assets/Family.jpg" class="card-img-top" alt="Image 5">
+                        <div class="card-body">
+                            <!-- Card body content -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3 position-relative">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Sports Performance Therapy</h5>
+                        </div>
+                        <img src="Assets/Sports.jpg" class="card-img-top" alt="Image 6">
+                        <div class="card-body">
+                            <!-- Card body content -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mx-auto mb-3">
+                    <div class="card position-relative">
+                        <div class="card-overlay">
+                            <h5 class="card-title">In-Person Counseling</h5>
+                        </div>
+                        <img src="Assets/therapy2.jpg" class="card-img-top" alt="Image 7">
+                        <div class="card-body">
+                            <!-- Card body content -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mx-auto mb-3">
+                    <div class="card position-relative">
+                        <div class="card-overlay">
+                            <h5 class="card-title">Online Counseling</h5>
+                        </div>
+                        <img src="Assets/Online2.jpg" class="card-img-top" alt="Image 8">
+                        <div class="card-body">
+                            <!-- Card body content -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- What We Treat Section -->
+    <section class="what-we-treat-section py-5" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container">
+            <div class="row">
+                <!-- Left column for photo -->
+                <div class="col-lg-6 mb-4">
+                    <img src="Assets/Brainicon.jpg" alt="What We Treat Photo" class="img-fluid">
+                </div>
+                <!-- Right column for list of treatments -->
+                <div class="col-lg-6">
+                    <h2 class="section-title">What We Treat</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item">ADHD</li>
+                        <li class="list-group-item">Anxiety</li>
+                        <li class="list-group-item">Bipolar Disorder</li>
+                        <li class="list-group-item">Depression</li>
+                        <li class="list-group-item">Emotional Regulation</li>
+                        <li class="list-group-item">Grief</li>
+                        <li class="list-group-item">Life Transitions</li>
+                        <li class="list-group-item">ODD</li>
+                        <li class="list-group-item">OCD</li>
+                        <li class="list-group-item">Panic Disorder</li>
+                        <li class="list-group-item">Parent/Child Relationship Issues</li>
+                        <li class="list-group-item">PTSD</li>
+                    </ul>
+                    <!-- Add more list items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- About Us Section -->
+<!-- About Us Section -->
+<section class="about-section bg-light" data-aos="fade-up" data-aos-duration="1000">
+    <div class="container-fluid px-0"> <!-- Use container-fluid to extend the container to the full width -->
+        <div class="row">
+            <div class="col-lg-12 text-center mt-4">
+                <div class="bg-primary text-white rounded p-3">
+                    <h2 class="aboutheader mb-2">Meet Our Team</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="image-wrapper">
+                    <img src="Assets/therapyfiller.jpg" alt="About Us Photo" class="about-photo img-fluid">
+                    <p>Jason Lugo, LMFT</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="image-wrapper">
+                    <img src="Assets/goldendoodle.jpg" alt="Second Image" class="img-fluid">
+                    <p>Teddy</p>
+                    <p>Therapy Dog in Training</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="map-section" class="py-5" style="background-color: #f0f0f0;">
+    <div class="container">
+        <div class="row">
+            <!-- Map column -->
+            <div class="col-lg-6">
+                <iframe width="550" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJsQrrx_TUTYYRno9dWEIXXv4&key=AIzaSyArQqarbtt_izZtom6Exa1DyD2BVhlHPBU"></iframe>
+            </div>
+            <!-- Location info column -->
+            <div class="col-lg-6" >
+                <div class="location-info" style="border: 2px solid rgb(15, 15, 15); padding: 15px ;">
+                    <h2 style="margin: 0; color: rgb(0, 0, 0);">Our Location</h2>
+                </div>
+                <div class="location-details" style="padding-top: 10px; padding-left: 50px;"> <!-- Adjusted left padding here -->
+                    <p>180 State St, Southlake,</p>
+                    <p>Southlake, Texas, 76092</p>
+                    <p>USA</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h5>Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#"></a></li>
+                        <li><a href="#">Adolescent Counseling</a></li>
+                        <li><a href="#">Adult Counseling</a></li>
+                        <!-- Add more services as needed -->
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>Phone: 123-456-7890</li>
+                        <li>Email: info@example.com</li>
+                        <li>Address: 123 Main St, City, Country</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="small">Terms & Conditions | Privacy Policy</p>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <p class="small">Created by Eliseo Rodriguez</p>
+                </div>
+            </div>
+            <p class="text-center small">© 2024 Anchor Of Hope Counseling. All rights reserved.</p>
+        </div>
+    </footer>
     <!-- Bootstrap JS links (jQuery and Bootstrap JS) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+   
+    <script>
+        AOS.init();
+        
+        function initMap() {
+            // Create a map object and specify the DOM element for display.
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: -32.942, lng: -97.131},
+                zoom: 8
+            });
+        }
+    </script>
+    
+    <!-- Google Maps API script -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArQqarbtt_izZtom6Exa1DyD2BVhlHPBU&callback=initMap"></script>
+   
 </body>
-</html>
+
+</html> 

@@ -1,0 +1,455 @@
+/* Basic CSS for styling */
+
+body {
+    font-family: Arial, sans-serif, sans-serif;
+    margin: 0;
+   
+    background: hsl(210, 78%, 27%)
+   
+}
+
+.logo {
+    font-size: 28px;
+    padding-right: 10px; /* Change this to adjust space between logo and text */
+    padding-left: 10px; /* Add this line to create space on the left */
+}
+
+.navbar-brand img {
+    max-height: 170px; /* Adjust logo size as needed */
+    
+}
+
+.navbar {
+    background-color: #fffffff8;
+    
+}
+
+.navbar-nav .nav-link {
+    color: #160244;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #000000;
+    color: #000000;
+    transform: translateY(-1px); /* Move link slightly upwards on hover */
+}
+
+.navbar-brand {
+    font-size: 1.25rem; /* Adjust font size as needed */
+}
+
+
+.navbar-toggler {
+    padding: 0.10r00em 0.2rem; /* Adjust padding as needed */
+    font-size: 0.8rem; /* Adjust font size as needed */
+}
+
+/* Apply hover effect for dropdown */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style for phone number and appointment section */
+.contact-section {
+    position: absolute; /* Position absolute for custom positioning */
+    bottom: 10px;
+    left: 10px;
+    background-color: #070424a9;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    padding-bottom: ;
+}
+
+.contact-section .btn {
+    background-color: #635e5eda; /* Red background color */
+    color: #ffffff; /* White text color */
+    border: rgb(0, 0, 124); /* Remove button border */
+}
+
+/* Optional: Hover effect */
+.contact-section .btn:hover {
+    background-color: #08c91867; /* Darker red on hover */
+    transform: scale(1.04); /* Magnify effect on hover */
+}
+
+/* Style for the carousel */
+#carouselExampleSlidesOnly {
+    width: 75%; /* Adjust the width as needed */
+    height: 50%;
+    margin: 0 auto; /* Center the carousel */
+    position: relative; /* Added for positioning */
+}
+
+.carousel-inner {
+    overflow: hidden; /* Prevent images from overflowing */
+    border-radius: 0px; /* Add some border-radius to the carousel */
+    position: relative; /* Added for positioning */
+    margin-top: 0px;
+    width: 100%;
+    height: 50%;
+}
+
+.about-section {
+    padding: 150px 0; /* Add some padding */
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text color */
+    text-align: center; /* Center text horizontally */
+}
+
+/* Style for the photo with white border */
+.about-photo {
+    border: 10px solid #0000005b; /* White border */
+    border-radius: 10px; /* Rounded corners */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+.Explore {
+    text-align: center;
+    margin-top: 50px;
+    color: #ffffff;
+    text-shadow: #0f083600 2px 2px;
+    border-color: #ffffff;
+
+}
+
+.counseling-section {
+    text-align: center;
+    background-color: #0f457a;
+}
+
+.card {
+    position: relative; /* Set position to relative for absolute positioning inside */
+    background-color: rgba(0, 0, 0, 0.26); /* Semi-transparent background */
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Magnify effect on hover */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f0f3ec; /* White text color */
+    padding: 20px; /* Add padding */
+    border-radius: 10px; /* Add border radius */
+    opacity: 1; /* Reduce opacity to make title pop more */
+
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.card:hover .card-overlay {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+
+
+.card:hover .card-img-top {
+    opacity: .1;} /* Reduce opacity of the image on hover */
+/* CSS for list items */
+.list-group-item {
+    transition: background-color 0.3s ease, transform 0.5s ease; /* Apply transitions */
+}
+
+/* Hover effect */
+.list-group-item:hover {
+    background-color: #b4eaffbb; /* Change background color to blue */
+    transform: scale(1.0089); /* Slightly magnify on hover */
+}
+
+.what-we-treat-section {
+    background-color: #0f457a; /* Set the desired background color */
+}
+
+.what-we-treat-section {
+    text-align: center; /* Center-align the content */
+    color: rgb(0, 0, 0);
+    
+}
+
+.what-we-treat-section h2 {
+
+    margin-bottom: 20px; /* Add some bottom margin to the title */
+
+    color: white; /* Set the font color of the title to white */
+   
+    }
+    .what-we-treat-section .col-lg-6 img {
+        margin-top: 60px; /* Adjust the top margin to move the image down */
+        border: #0b3258;
+    }
+    
+
+    .footer{
+        background-color: rgb(30, 11, 134);
+    color: #ffffff;
+    }
+    /* Add space between titles and content in the footer */
+.footer h5 {
+    margin-bottom: 10px; /* Adjust this value to increase or decrease space */
+}
+
+/* Add space between content in the footer */
+.footer ul.list-unstyled {
+    margin-bottom: 50px; /* Adjust this value to increase or decrease space */
+}
+
+.AboutService{
+padding-top: 60px;
+padding-bottom: 50px;
+background-color: #fbffff;
+font-size: large;
+}
+.aboutheader{
+    font-size: 300%;
+    padding-bottom: 25px;
+    text-align: center;
+    padding-left: 20px;
+}
+.about-image {
+    margin-top: 175px; /* Adjust the value to move the image lower */
+    border-color: #0f457a;
+}
+
+.navbar-brand img {
+    max-height: 100px; /* Adjust logo size as needed */
+    margin-right: -100px; /* Add margin to separate logo from text */
+    color: grey;
+}
+
+.navbar-brand span {
+    font-family: 'Playball', cursive; /* Apply Playball font style */
+    font-size: 70px; /* Adjust font size as needed */
+    margin-top: 30px; /* Adjust vertical alignment as needed */
+
+}
+.image-wrapper {
+    height: 100%;
+}
+
+.image-wrapper img {
+    width: 60%;
+    height: 90%;
+    object-fit: cover;
+}
+.about-section {
+    background-color: #f5faff;
+    
+}
+
+.aboutheader{
+    padding-bottom: 1px;
+}
+
+ /* Custom styles */
+ #map-section {
+    background-color: #f8f9fa; /* Grey background */
+}
+
+#map {
+    height: 400px; /* Adjust map height as needed */
+    width: 100%;
+}
+
+.location-info {
+    padding: 2px;
+}
+
+.location-info{
+    padding-left: px;
+    font-size: 1;
+}
+.map-section
+{background-color: #7c7c7c;
+    
+}
+.new-section {
+    /* Your styles for .new-section */
+}
+
+.image-container {
+    position: relative; /* Ensure relative positioning */
+   
+    
+}
+
+.long-picture {
+    display: block; /* Ensure the image is displayed as a block element */
+    width: 100%; /* Occupy the full width of its container */
+    height: 675px; /* Allow the height to adjust proportionally */
+    
+}
+
+.centered-text {
+    position: absolute; /* Position the text absolutely */
+    top: 45%; /* Place the top of the text container at the vertical center of its parent */
+    left: 50%; /* Place the left of the text container at the horizontal center of its parent */
+    transform: translate(-50%, -50%); /* Translate the text container back by half of its own width and height */
+    text-align: center; /* Center the text horizontally */
+    color: rgb(235, 235, 235); /* Set text color to contrast with the background */
+    font-family:'sans serif';
+   
+}
+.navbar-nav {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+body {
+    margin: 0;
+}
+
+.navbar {
+    width: 100%; /* Ensure the navbar spans the entire width */
+}
+
+.container {
+    width: 100%; /* Ensure containers span the entire width */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.long-picture img {
+    width: 100%; /* Ensure long pictures don't exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+body {
+    margin: 0;
+   
+}
+
+
+
+.container {
+    width: 100%; /* Ensure containers span the entire width */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body {
+    margin: 0;
+}
+
+
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.long-picture img {
+    width: 100%;
+    height: auto;
+    
+}
+
+.card {
+    max-width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.contact-section {
+    text-align: center;
+    overflow-x:  
+}
+
+.about-section,
+.what-we-treat-section,
+.about-section {
+    padding: 100px ;
+}
+
+.about-photo {
+    width: 100%;
+    height: auto;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+}
+/* CSS */
+
+.navbar {
+
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: rgba(255, 255, 255, 0.678); /* Initial background color with opacity */
+    transition: background-color 0.2s ease; /* Smooth transition effect */
+    transition: opacity 0.3s ease;
+}
+.custom-grey-btn {
+    background-color: rgba(128, 128, 128, 0.774);
+    border-color: rgb(51, 24, 25);
+    
+opacity: 80%;
+}
+.navbar.shrink {
+    height: 70px; /* Adjust height as needed */
+    opacity: 85%;
+}
+.banner-section {
+    position: relative;
+    height: 200px; /* Adjust the height as needed */
+    width: 100%;
+}
+
+.banner-image {
+    background-image: url('Assets/pexels-cottonbro-4098368.jpg'); /* Replace 'assets/banner-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.blue-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(18, 18, 114, 0.418); /* Adjust the opacity and color as needed */
+}
+
+.centered-text {
+    padding-top: ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust text color as needed */
+}
+
+.banner-text {
+    font-size: 24px; /* Adjust font size as needed */
+    margin-bottom: 10px;
+    font-size: 40px; /* Adjust font size as needed */
+}
+
+.banner-description {
+    font-size: 35px; /* Adjust font size as needed */
+}
+.banner-section {
+    position: relative;
+    height: 300px; /* Adjust the height as needed */
+    width: 100%;
+    margin-top: 120px; /* Adjust this value to match the height of your navbar */
+}
