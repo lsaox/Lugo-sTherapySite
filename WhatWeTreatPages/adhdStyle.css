@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif, sans-serif;
     margin: 0;
    
-    background: hsl(210, 78%, 27%)
+    background: hsl(0, 0%, 100%)
    
 }
 
@@ -184,7 +184,7 @@ body {
     
 
     .footer{
-        background-color: rgb(30, 11, 134);
+        background-color: hsl(210, 78%, 27%);
     color: #ffffff;
     }
     /* Add space between titles and content in the footer */
@@ -453,3 +453,69 @@ opacity: 80%;
     width: 100%;
     margin-top: 120px; /* Adjust this value to match the height of your navbar */
 }
+.banner-image2 {
+    background-image: url('Assets/Adjustment-Disorder-1.jpg'); /* Replace 'assets/banner-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+.banner-image3 {
+    background-image: url('Assets/desperate-5011953_1280.jpg'); /* Replace 'assets/banner-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+.banner-image4 {
+    background-image: url('Assets/beanie-2562646_1280 (2).jpg'); /* Replace 'assets/banner-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+button:hover {
+  
+    transform: scale(1.05);
+    background-color: #003972; /* Adjust the color to your preference */
+}
+
+.banner-image5 {
+    background-image: url('Assets/woman-5718089_1280.jpg'); /* Replace 'assets/banner-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+.banner-image6 {
+    background-image: url('Assets/DMDD-860x400.jpg'); /* Replace 'assets/banner-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+.banner-image7 {
+    background-image: url('Assets/19-1243 NHLBI OY2 Q1 FHT Insomnia_900x600px (1).jpg'); /* Replace 'assets/banner-image.jpg' with the path to your image */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+.m-plus-1p-light {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .m-plus-1p-regular {
+    font-family: "M PLUS 1p", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  body {
+    font-family: "M PLUS 2p", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  

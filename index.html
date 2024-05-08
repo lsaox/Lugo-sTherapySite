@@ -12,14 +12,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Playball&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400&display=swap" rel="stylesheet">
+    
+    
+    
     <script src="script.js"></script>
     <style>
-        body {
-            overflow-x:hidden;
-            margin: 0;
- 
+ .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            bottom: 100%;
+            left: 0;
+            width: 200px;
+            z-index: 1;
+            display: none;
+        }
+
+        .list-group-item {
+            position: relative;
+            cursor: pointer; /* Add cursor pointer for better UX */
+        }
+
+        .list-group-item:hover .tooltip {
+            display: block;
         }
     </style>
+
 </head>
 
 <body>
@@ -123,7 +146,7 @@
             </div>
         </div>
     </section>
-    
+
 
   
   
@@ -132,7 +155,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
-                    <h6  id="AboutServiceh" class="aboutheader">Dedicated Counseling</h6>
+                    <h6  id="AboutServiceh" class="aboutheader" style="font-size: 40px; text-align: center;"> Evidence-Based Counseling and Psychiatric Service</h6>
                     <p>
                         Dedicated to providing effective, evidence-based counseling and psychiatric services, Anchor of
                         Hope Counseling stand as beacons in mental health care, offering expert, compassionate
@@ -145,7 +168,9 @@
                         in-person service options, Anchor of Hope Counseling is committed to guiding individuals
                         towards healing and Growth. Our approach is grounded in the latest evidence-based practices and
                         a profound understanding of the challenges faced in the 21st century. </p>
+                        <a href="#counseling-sectionh" class="btn btn-primary btn-lg smooth-scroll custom-grey-btn" >Learn More About Us</a>
                 </div>
+
                 <div class="col-lg-6">
                     <img src="Assets/aboutservice.jpg" class="img-fluid about-image" alt="Placeholder Image">
                 </div>
@@ -153,8 +178,23 @@
         </div>
     </section>
 
+
+   <section class="hero-section" data-aos="fade-up" data-aos-duration="1000" style="padding-bottom:65px ;">
+    <div class="background-image"></div>
+    <div class="content-wrapper">
+        <div class="blue-opacity-box">
+            <h2 style="margin-top: 10px;">You're in the right place. Counseling can Help.</h2> <!-- Adjusted margin-top value -->
+            <p style="margin-top: 40px; font-size: 18px;">Making the decision to seek counseling is a brave and important step on the path to better wellbeing. At Anchor Of Hope, we understand the courage it takes to reach out for help, and we’re here to support you with compassion and confidentiality every step of the way. Let us be a part of your journey to healing and personal growth. Contact us today to schedule your initial appointment and start your journey towards a more fulfilling life.</p>
+            <div class="container">
+                <button class="btn btn-primary" style="margin-top: 20px;">Contact Us</button>
+                <button class="btn btn-secondary" style="margin-top: 20px;">Schedule an Appointment</button>
+            </div>
+        </div>
+    </div>
+</section>
+
     <!-- Counseling Section -->
-    <section class="Explore" data-aos="fade-up" data-aos-duration="1000">
+    <section class="Explore" data-aos="fade-up" data-aos-duration="1000" style="padding-top: 50px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -270,93 +310,125 @@
     </section>
 
 
-    <!-- What We Treat Section -->
-    <section class="what-we-treat-section py-5" data-aos="fade-up" data-aos-duration="1000">
+<!-- What We Treat Section -->
+<section class="what-we-treat-section py-5" data-aos="fade-up" data-aos-duration="1000" style="background-color: #eaf0f1;">
+    <div class="container">
+        <div class="row">
+            <!-- Left column for photo --> 
+            <div class="col-lg-6 mb-4">
+                <img src="Assets/Brainicon.jpg" alt="What We Treat Photo" class="img-fluid" style="max-width: 100%;">
+            </div>
+            <!-- Right column for list of treatments -->
+            <div class="col-lg-6">
+                <h2 class="section-title" style="color: #002757; padding-top: 50px;">What We Treat</h2>
+                <p class="image-description" style="color: #000000; padding-top: px; font-size: 18px;">
+                    Anchor Of Hope provides comprehensive mental health services to address a wide range of concerns and conditions. Our team of experienced therapists specializes in evidence-based treatments tailored to meet the unique needs of each individual. Whether you're seeking support for anxiety, depression, relationship issues, or other challenges, we're here to help you navigate your journey toward healing and growth.
+                </p>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <ul class="list-group" style="color: #002a5e;">
+                            <li class="list-group-item" data-description="ADHD: Attention Deficit Hyperactivity Disorder is a neurodevelopmental disorder characterized by difficulty maintaining attention, hyperactivity, and impulsivity. We offer comprehensive assessment and treatment options tailored to individuals of all ages.">ADHD <div class="tooltip"></div></li>
+                            <li class="list-group-item" data-description="Anxiety: Anxiety disorders involve excessive fear or worry that interferes with daily activities. Our treatments include therapy, medication, and lifestyle modifications to help manage anxiety symptoms effectively.">Anxiety <div class="tooltip"></div></li>
+                            <li class="list-group-item" data-description="Bipolar Disorder: Bipolar disorder is a mood disorder characterized by extreme shifts in mood, energy, and activity levels. We provide comprehensive treatment plans to stabilize mood and improve quality of life.">Bipolar Disorder <div class="tooltip"></div></li>
+                            <li class="list-group-item" data-description="Depression: Depression is a common mental health condition characterized by persistent feelings of sadness, hopelessness, and loss of interest or pleasure in activities. Our treatment approach includes therapy, medication, and lifestyle changes to alleviate symptoms and improve overall well-being.">Depression <div class="tooltip"></div></li>
+                            <li class="list-group-item" data-description="Emotional Regulation: Emotional regulation refers to the ability to manage and control one's emotions effectively. We offer specialized therapy and support to help individuals develop healthy coping strategies and regulate their emotions in various situations.">Emotional Regulation <div class="tooltip"></div></li>
+                            <li class="list-group-item" data-description="Grief: Grief is a natural response to loss, such as the death of a loved one or the end of a significant relationship. Our therapists provide compassionate support and guidance to individuals experiencing grief, helping them navigate through the grieving process and find healing and acceptance.">Grief <div class="tooltip"></div></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 mb-4" style="color: #002a5e;">
+                        <ul class="list-group">
+                            <li class="list-group-item" data-description="Life Transitions: Life transitions, such as starting a new job, moving to a new city, or becoming a parent, can be challenging and stressful. We offer counseling and support to help individuals navigate through life transitions successfully and adapt to change with resilience and confidence.">Life Transitions <div class="tooltip"></div></li>
+                            <li class="list-group-item" data-description="ODD: Oppositional Defiant Disorder is a childhood behavioral disorder characterized by defiance, hostility, and disobedience towards authority figures. Our treatment approach includes therapy, parental training, and behavior management strategies to help children and families effectively manage ODD symptoms and improve family functioning.">ODD <div class="tooltip"></div></li>
+                            <li class="list-group-item" data-description="OCD: Obsessive-Compulsive Disorder is a mental health condition characterized by intrusive thoughts (obsessions) and repetitive behaviors or mental acts (compulsions). Our therapists provide evidence-based treatments, such as cognitive-behavioral therapy (CBT) and exposure and response prevention (ERP), to help individuals manage OCD symptoms and improve their quality of life.">OCD <div class="tooltip"></div></li>
+                            <li class="list-group-item" data-description="Panic Disorder: Panic disorder is a type of anxiety disorder characterized by recurrent panic attacks, which are sudden episodes of intense fear or discomfort. Our treatment approach includes therapy, medication, and relaxation techniques to help individuals manage panic symptoms and reduce the frequency and severity of panic attacks.">Panic Disorder <div class="tooltip"></div></li>
+                            <li class="list-group-item" data-description="Parent/Child Relationship Issues: Parent-child relationship issues can arise due to various factors, such as communication problems, behavioral issues, or life changes. Our therapists offer family therapy and parenting support to help improve parent-child relationships, strengthen family bonds, and promote healthy communication and interaction.">Parent/Child Relationship Issues <div class="tooltip"></div></li>
+                            <li class="list-group-item" data-description="PTSD: Post-Traumatic Stress Disorder is a mental health condition that can develop after experiencing or witnessing a traumatic event. Our therapists provide trauma-focused therapy, such as cognitive processing therapy (CPT) and eye movement desensitization and reprocessing (EMDR), to help individuals process traumatic memories, reduce PTSD symptoms, and regain a sense of safety and control.">PTSD <div class="tooltip"></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const listItems = document.querySelectorAll('.list-group-item');
+
+        listItems.forEach(item => {
+            item.addEventListener('mouseenter', function () {
+                const description = this.dataset.description;
+                const tooltip = this.querySelector('.tooltip');
+                tooltip.textContent = description;
+            });
+
+            item.addEventListener('mouseleave', function () {
+                const tooltip = this.querySelector('.tooltip');
+                tooltip.textContent = '';
+            });
+        });
+    });
+</script>
+<!-- About Us Section -->
+
+
+
+   
+<section class="section-text" style="display: flex; align-items: flex-start; padding-top: 70px; justify-content: space-between; ; padding-left: 100px; padding-bottom: 50px; background-color: #ffffff;">
+    <div style="flex: 1; text-align: left;">
+        <h2 style="font-size: 30px; font-weight: bold; color: #000000; text-align: center; margin-bottom: 20px; margin-top: 0;">Meet the Team</h2>
+        <h2 style="font-size: 24px; color: #000000; margin-bottom: 20px;">Jason Lugo, LMFT
+            Licensed Marriage and Family Therapist</h2>
+        <p style="font-size: 16px; color: #000000;">Jason is a licensed marriage and family therapist whose passion is helping children, adolescents, adults, couples, and families reach their personal goals and fullest potential. Blending effective clinical skills with 15 years of pastoral counseling experience, Jason combines compassion and empathy with honesty and practical tools. He specializes in anxiety, depression, relationship difficulties, marriage, parenting, and life-transitions.
+
+            When meeting with Jason, you can expect a sincere and accepting atmosphere regardless of your situation and background. He merges cognitive behavioral therapy (CBT) with solution-focused brief therapy when counseling, and tailors each session to your unique goals and background. Regardless of where you are, Jason believes no situation is hopeless and that you have the resources and resiliency to achieve health and happiness.
+            
+            Jason grew up in Texas and is a U.S. Army Veteran and ordained minister. He earned his Master of Arts degree in marriage and family therapy from Liberty University, and his Bachelor of Arts degree from the University of Texas at Arlington. Jason’s clinical experience includes Seattle’s Center for Child Development and Alliance Child and Family Solutions in Fort Worth.
+            
+            In addition to working with patients, Jason has conducted extensive workshops, seminars, and conferences for marriage, parenting, self-help, and leadership throughout the United States, Mexico, and Russia.</p>
+    </div>
+    <div style="flex: 1; padding-left: 65px; padding-top: 110px;">
+        <!-- Placeholder image -->
+        <img src="Assets/therapyfiller.jpg" alt="Image" style="max-width: 100%; height: 110%;">
+    </div>
+</section>
+
+
+
+
+ 
+    <section id="map-section" class="py-5" style="background-color: #f0f0f0;">
         <div class="container">
             <div class="row">
-                <!-- Left column for photo -->
-                <div class="col-lg-6 mb-4">
-                    <img src="Assets/Brainicon.jpg" alt="What We Treat Photo" class="img-fluid">
-                </div>
-                <!-- Right column for list of treatments -->
+                <!-- Map column -->
                 <div class="col-lg-6">
-                    <h2 class="section-title">What We Treat</h2>
-                    <ul class="list-group">
-                        <li class="list-group-item">ADHD</li>
-                        <li class="list-group-item">Anxiety</li>
-                        <li class="list-group-item">Bipolar Disorder</li>
-                        <li class="list-group-item">Depression</li>
-                        <li class="list-group-item">Emotional Regulation</li>
-                        <li class="list-group-item">Grief</li>
-                        <li class="list-group-item">Life Transitions</li>
-                        <li class="list-group-item">ODD</li>
-                        <li class="list-group-item">OCD</li>
-                        <li class="list-group-item">Panic Disorder</li>
-                        <li class="list-group-item">Parent/Child Relationship Issues</li>
-                        <li class="list-group-item">PTSD</li>
-                    </ul>
-                    <!-- Add more list items as needed -->
-                    </ul>
+                    <iframe width="550" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJsQrrx_TUTYYRno9dWEIXXv4&key=AIzaSyArQqarbtt_izZtom6Exa1DyD2BVhlHPBU"></iframe>
                 </div>
+                <!-- Location info column -->
+                <div class="col-lg-6">
+                    <div class="location-info" style="background-color: hsl(210, 78%, 27%); border: 2px solid rgba(13, 0, 85, 0.308); padding: 15px;">
+                        <h2 style="margin: 0; color: rgb(255, 255, 255);">Our Location</h2>
+                    </div>
+                    <div class="location-details" style="padding-top: 10px;">
+                        <img src="https://www.officeevolution.com/wp-content/uploads/2020/03/SouthLake-Office-Evolution-1024x576.jpg" alt="Location Image" style="max-width: 100%; height: auto; border: 2px solid #cccccc; margin-bottom: 10px;">
+                        <p style="margin-bottom: 5px;"><strong>Address:</strong> 180 State St, Southlake, Texas, 76092</p>
+                        <p style="margin-bottom: 5px;"><strong>Hours:</strong> Monday - Friday, 9:00 AM - 5:00 PM</p>
+                        <p style="margin-bottom: 5px;"><strong>Phone:</strong> +1 (123) 456-7890</p>
+                        <p style="margin-bottom: 5px;"><strong>Email:</strong> info@example.com</p>
+                        <div style="padding-top: 10px;">
+                            <a href="tel:+11234567890" class="btn btn-primary" style="background-color: #cccccc; color: #000000;">Call Us Today</a>
+                            <a href="mailto:info@example.com" class="btn btn-primary" style="margin-left: 10px; background-color: #cccccc; color: #000000;">Email</a>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
 
-
-<!-- About Us Section -->
-<!-- About Us Section -->
-<section class="about-section bg-light" data-aos="fade-up" data-aos-duration="1000">
-    <div class="container-fluid px-0"> <!-- Use container-fluid to extend the container to the full width -->
-        <div class="row">
-            <div class="col-lg-12 text-center mt-4">
-                <div class="bg-primary text-white rounded p-3">
-                    <h2 class="aboutheader mb-2">Meet Our Team</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="image-wrapper">
-                    <img src="Assets/therapyfiller.jpg" alt="About Us Photo" class="about-photo img-fluid">
-                    <p>Jason Lugo, LMFT</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="image-wrapper">
-                    <img src="Assets/goldendoodle.jpg" alt="Second Image" class="img-fluid">
-                    <p>Teddy</p>
-                    <p>Therapy Dog in Training</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="map-section" class="py-5" style="background-color: #f0f0f0;">
-    <div class="container">
-        <div class="row">
-            <!-- Map column -->
-            <div class="col-lg-6">
-                <iframe width="550" height="450" style="border:0" loading="lazy" allowfullscreen src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJsQrrx_TUTYYRno9dWEIXXv4&key=AIzaSyArQqarbtt_izZtom6Exa1DyD2BVhlHPBU"></iframe>
-            </div>
-            <!-- Location info column -->
-            <div class="col-lg-6" >
-                <div class="location-info" style="border: 2px solid rgb(15, 15, 15); padding: 15px ;">
-                    <h2 style="margin: 0; color: rgb(0, 0, 0);">Our Location</h2>
-                </div>
-                <div class="location-details" style="padding-top: 10px; padding-left: 50px;"> <!-- Adjusted left padding here -->
-                    <p>180 State St, Southlake,</p>
-                    <p>Southlake, Texas, 76092</p>
-                    <p>USA</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-    <footer class="footer">
+                        <p style="margin-bottom: 5px;"><strong>Address:</strong> 180 State St, Southlake, Texas, 76092</p>
+    
+    
+    <footer class="footer" style="padding-top:60px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -370,24 +442,24 @@
                 <div class="col-lg-4">
                     <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#"></a></li>
-                        <li><a href="#">Adolescent Counseling</a></li>
-                        <li><a href="#">Adult Counseling</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Who We Treat</a></li>
+                        <li><a href="#">Request an Appointment</a></li>
+                        <li><a href="#">Contact Us</a></li>
                         <!-- Add more services as needed -->
                     </ul>
                 </div>
                 <div class="col-lg-4">
                     <h5>Contact</h5>
-                    <ul class="list-unstyled">
-                        <li>Phone: 123-456-7890</li>
-                        <li>Email: info@example.com</li>
-                        <li>Address: 123 Main St, City, Country</li>
+                    <ul class="list-unstyled">                   
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Phone: 123-456-7890</a></li>
                     </ul>
                 </div>
             </div>
             <hr>
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 text-left">
                     <p class="small">Terms & Conditions | Privacy Policy</p>
                 </div>
                 <div class="col-lg-6 text-right">
